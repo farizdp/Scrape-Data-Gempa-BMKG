@@ -7,7 +7,11 @@ The program will scrape the earthquake data from a user-specified time period an
 
 ## Source
 
-The data is scraped from the BMKG website at [https://repogempa.bmkg.go.id/](https://repogempa.bmkg.go.id/). 
+The data is scraped from the BMKG website at [https://repogempa.bmkg.go.id/](https://repogempa.bmkg.go.id/).
+With default parameter:
+  - Magnitude Interval : min 0.0, max 10.0
+  - Depth (km) : min 0, max 1000
+  - Geographic Region : North 6, South -11, West 95, East 141
 
 ## Requirements
 
@@ -24,7 +28,6 @@ pip install -r requirements.txt
 ```
 
 4. Set your date `start_date` and `end_date` that you want in file `main.py`. 
-
 5. Run the script by running the following command in your terminal:
 
 ```
@@ -41,7 +44,7 @@ The program will output the following files:
 
   - `No` : Event number of list of events
   - `Event ID` : The event id of the earthquake.
-  - `Date Time`: The date of the earthquake in YYYY-MM-DDT format.
+  - `Date Time`: The date of the earthquake in YYYY-MM-DDT%H:%M:%S.%fZ format.
   - `Latitude`: The latitude of the earthquake.
   - `Longitude`: The longitude of the earthquake.
   - `Magnitude`: The magnitude of the earthquake.
